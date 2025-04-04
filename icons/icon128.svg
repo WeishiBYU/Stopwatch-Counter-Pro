@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <circle cx="64" cy="64" r="56" fill="white" stroke="#4285f4" stroke-width="8"/>
+  <line x1="64" y1="64" x2="64" y2="32" stroke="#4285f4" stroke-width="6" stroke-linecap="round"/>
+  <line x1="64" y1="64" x2="88" y2="64" stroke="#4285f4" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="64" cy="64" r="5" fill="#4285f4"/>
+  
+  <!-- Tally Counter Elements -->
+  <rect x="85" y="90" width="30" height="22" rx="3" ry="3" fill="#34a853"/>
+  <text x="100" y="106" font-family="Arial" font-size="16" fill="white" text-anchor="middle">+1</text>
+  
+  <!-- CSV Export Icon -->
+  <rect x="13" y="90" width="30" height="22" rx="3" ry="3" fill="#fbbc05"/>
+  <text x="28" y="106" font-family="Arial" font-size="10" fill="white" text-anchor="middle">CSV</text>
+</svg>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stopwatch with Counters</title>
+  <link rel="stylesheet" href="popup.css">
+  <!-- FileSaver.js for CSV export (local version) -->
+  <script src="lib/FileSaver.min.js"></script>
+  <!-- Chart.js for visualization (UMD version) -->
+  <script src="lib/chart.umd.min.js"></script>
+  <!-- Database operations -->
+  <script src="database.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Stopwatch Counter Pro</h1>
+    
+    <!-- Stopwatch Display -->
+    <div class="stopwatch-container">
+      <h2>Stopwatch</h2>
+      <div class="stopwatch-display">
+        <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">00</span>
+      </div>
+      <div class="stopwatch-controls">
+        <button id="start-stop" class="control-btn">▶️ Start</button>
+        <button id="reset" class="control-btn">🔄 Reset</button>
+      </div>
+      <div class="background-notice">
+        <span class="background-indicator" id="background-indicator"></span>
+        <span class="background-text">Runs in background even when closed</span>
+      </div>
+      <div class="background-notice">
+        <span class="background-indicator" id="background-indicator"></span>
+        <span class="background-text">Runs in background even when closed</span>
+      </div>
+    </div>
+
+    <!-- Tally Counters -->
+    <div class="counters-section">
+      <h2>Tally Counters</h2>
+      <div id="counters-container"></div>
+      <div class="counter-form">
+        <input type="text" id="counter-name" placeholder="Enter counter name">
+        <button id="add-counter">➕ Add Counter</button>
+      </div>
+    </div>
+
+    <!-- Data Visualization -->
+    <div class="visualization-section">
+      <h2>Data Visualization</h2>
+      <div class="chart-container">
+        <canvas id="counter-chart"></canvas>
+      </div>
+      <div class="chart-options">
+        <select id="chart-type">
+          <option value="bar">Bar Chart</option>
+          <option value="line">Line Chart</option>
+          <option value="pie">Pie Chart</option>
+          <option value="polarArea">Polar Area</option>
+          <option value="radar">Radar Chart</option>
+        </select>
+        <button id="compare-chart" class="chart-btn">📊 Compare</button>
+      </div>
+    </div>
+
+    <!-- Session Management -->
+    <div class="session-section">
+      <h2>Session Management</h2>
+      <div class="session-controls">
+        <button id="save-session" class="session-btn">💾 Save Session</button>
+        <button id="view-history" class="session-btn">📜 View History</button>
+      </div>
+    </div>
+
+    <!-- Export Section -->
+    <div class="export-section">
+      <button id="export-csv" class="export-btn">📤 Export to CSV</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
